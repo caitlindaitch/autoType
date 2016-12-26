@@ -10,8 +10,12 @@ app.directive("autoType", ["$timeout", function($timeout){
 			var timer = null;
 
 			function updateText(elem, i, text){
-				if (i <= text.length){
-					elem.html(text.substring(0, i));
+				if (i === text.length){
+					elem.html(text.substring(0, i) + " <span class='cursor blink'>|</span>");
+					i++;
+					return;
+				} else if (i <= text.length){
+					elem.html(text.substring(0, i) + " <span class='cursor'>|</span>");
 					i++;
 					timer = $timeout(function(){
 						updateText(elem, i, text);
@@ -25,4 +29,4 @@ app.directive("autoType", ["$timeout", function($timeout){
 			}
 		}
 	}
-}])
+}]);

@@ -1,11 +1,25 @@
 body {
-	font-family: helvetica;
-	text-align: center;
-}
+  font-family: helvetica;
+  text-align: center; }
 
 .samples {
-	width: 50%;
-	margin: 0 auto;
-	text-align: left;
-	padding: 2rem;
-}
+  width: 50%;
+  margin: 0 auto;
+  text-align: left;
+  padding: 2rem; }
+
+.cursor {
+  font-weight: bold; }
+
+@keyframes blinking {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+.cursor {
+  font-weight: bold; }
+
+.blink {
+  animation: blinking 1s infinite; }
+
+/*# sourceMappingURL=style.css.map */
