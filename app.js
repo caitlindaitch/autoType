@@ -6,7 +6,7 @@ app.directive("autoType", ["$timeout", function($timeout){
 		scope: false,
 		link: function(scope, elem, attr){
 			var text = attr.typeContent;
-			var blink = attr.blinkSpeed;
+			var blink = attr.blinkSpeed !== undefined ? attr.blinkSpeed : 300;
 			var timer = null;
 
 			console.log(blink);
@@ -17,7 +17,7 @@ app.directive("autoType", ["$timeout", function($timeout){
 					i++;
 					timer = $timeout(function() {
 						updateText(elem, i, text);
-					}, 300);
+					}, blink);
 					return;
 				}
 			}
