@@ -9,8 +9,6 @@ app.directive("autoType", ["$timeout", function($timeout){
 			var blink = attr.blinkSpeed !== undefined ? attr.blinkSpeed : 300;
 			var timer = null;
 
-			console.log(blink);
-
 			function updateText(elem, i, text){
 				if (i <= text.length) {
 					elem.html(text.substring(0, i));
