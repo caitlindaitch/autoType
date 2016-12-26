@@ -1,0 +1,11 @@
+body {
+	font-family: helvetica;
+	text-align: center;
+}
+
+.samples {
+	width: 50%;
+	margin: 0 auto;
+	text-align: left;
+	padding: 2rem;
+}

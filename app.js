@@ -10,27 +10,19 @@ app.directive("autoType", ["$timeout", function($timeout){
 			var timer = null;
 
 			function updateText(elem, i, text){
-				if (i <= text.length) {
+				if (i <= text.length){
 					elem.html(text.substring(0, i));
 					i++;
-					timer = $timeout(function() {
+					timer = $timeout(function(){
 						updateText(elem, i, text);
 					}, blink);
 					return;
 				}
 			}
 
-			if (text) {
-				timer = $timeout(function() {
-					updateText(elem, 0, text);
-				}, 500);
+			if (text){
+				updateText(elem, 0, text);
 			}
-
-			scope.$on("$destroy", function() {
-				if(timer) {
-					$timeout.cancel(timer);
-				}
-			});
 		}
 	}
 }])
