@@ -3,13 +3,21 @@ body {
   text-align: center; }
 
 .samples {
-  width: 50%;
+  width: 75%;
   margin: 0 auto;
   text-align: left;
   padding: 2rem; }
 
+.pt-200 {
+  padding-top: 2rem; }
+
 .cursor {
   font-weight: bold; }
+
+pre {
+  background-color: #E4E6E9;
+  border-radius: 3px;
+  padding: 1rem; }
 
 @keyframes blinking {
   0% {
